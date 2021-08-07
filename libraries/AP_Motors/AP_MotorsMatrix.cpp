@@ -888,14 +888,14 @@ void AP_MotorsMatrix::setup_motors(motor_frame_class frame_class, motor_frame_ty
                     break;
                 case MOTOR_FRAME_TYPE_V:
                     _frame_type_string = "V";
-                    add_motor(AP_MOTORS_MOT_1,   45,  0.7981f, 1);
-                    add_motor(AP_MOTORS_MOT_2,  -45, -0.7981f, 7);
-                    add_motor(AP_MOTORS_MOT_3, -135,  1.0000f, 5);
-                    add_motor(AP_MOTORS_MOT_4,  135, -1.0000f, 3);
-                    add_motor(AP_MOTORS_MOT_5,  -45,  0.7981f, 8);
-                    add_motor(AP_MOTORS_MOT_6,   45, -0.7981f, 2);
-                    add_motor(AP_MOTORS_MOT_7,  135,  1.0000f, 4);
-                    add_motor(AP_MOTORS_MOT_8, -135, -1.0000f, 6);
+                    add_motor_raw(AP_MOTORS_MOT_1, -0.828f, 1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 1);
+                    add_motor_raw(AP_MOTORS_MOT_2, 0.828f, 1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CW, 2);
+                    add_motor_raw(AP_MOTORS_MOT_3, 0.828f, -1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 3);
+                    add_motor_raw(AP_MOTORS_MOT_4, -0.828f, -1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CW, 4);
+                    add_motor_raw(AP_MOTORS_MOT_5, 0.828f, 1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CW, 5);
+                    add_motor_raw(AP_MOTORS_MOT_6, -0.828f, 1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 6);
+                    add_motor_raw(AP_MOTORS_MOT_7, -0.828f, -1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CW, 7);
+                    add_motor_raw(AP_MOTORS_MOT_8, 0.828f, -1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 8);
                     break;
                 case MOTOR_FRAME_TYPE_H:
                     // H frame set-up - same as X but motors spin in opposite directions
